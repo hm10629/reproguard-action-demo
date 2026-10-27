@@ -1,0 +1,20 @@
+name: ReproGuard validation
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hm10629/reproguard@v1
+        with:
+          constraints: docs/experiment-protocol.md
+          output: reproguard-report
+          fail-on: never
+          post-comment: true
