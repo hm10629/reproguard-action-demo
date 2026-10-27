@@ -1,6 +1,6 @@
 ﻿"""Small validation fixture for the ReproGuard cross-repository demo."""
 
-BATCH_SIZE = 32
+BATCH_SIZE = 16
 RANDOM_SEED = 2026
 
 
